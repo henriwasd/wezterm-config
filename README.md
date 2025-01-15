@@ -34,32 +34,32 @@
 
   GPU + Adapter combo is selected based on the following criteria:
 
-  1.  <details>
-      <summary>Best GPU available</summary>
+  1. <details>
+     <summary>Best GPU available</summary>
 
-      `Discrete` > `Integrated` > `Other` (for `wgpu`'s OpenGl implementation on Discrete GPU) > `Cpu`
-      </details>
+     `Discrete` > `Integrated` > `Other` (for `wgpu`'s OpenGl implementation on Discrete GPU) > `Cpu`
+     </details>
 
-  2.  <details>
-      <summary>Best graphics API available (based off my very scientific scroll a big log file in Neovim test 😁)</summary>
+  2. <details>
+     <summary>Best graphics API available (based off my very scientific scroll a big log file in Neovim test 😁)</summary>
 
-      > :bulb:<br>
-      > The available graphics API choices change based on your OS.<br>
-      > These options correspond to the APIs the `wgpu` crate (which powers WezTerm's gui in `WebGpu` mode)<br>
-      > currently has support implemented for.<br>
-      > See: <https://github.com/gfx-rs/wgpu#supported-platforms> for more info
+     > :bulb:<br>
+     > The available graphics API choices change based on your OS.<br>
+     > These options correspond to the APIs the `wgpu` crate (which powers WezTerm's gui in `WebGpu` mode)<br>
+     > currently has support implemented for.<br>
+     > See: <https://github.com/gfx-rs/wgpu#supported-platforms> for more info
 
-      - Windows: `Dx12` > `Vulkan` > `OpenGl`
-      - Linux: `Vulkan` > `OpenGl`
-      - Mac: `Metal`
+     - Windows: `Dx12` > `Vulkan` > `OpenGl`
+     - Linux: `Vulkan` > `OpenGl`
+     - Mac: `Metal`
 
-      </details>
+     </details>
 
 ---
 
 ### Getting Started
 
-- ##### Requirements:
+- ##### Requirements
 
   - <details>
       <summary><b>WezTerm</b></summary>
@@ -99,7 +99,8 @@
         ```sh
         choco install wezterm -y
         ```
-      </details>
+
+        </details>
 
     - <details>
       <summary>Install Nightly</summary>
@@ -117,13 +118,14 @@
         scoop bucket add k https://github.com/KevinSilvester/scoop-bucket
         scoop install k/wezterm-nightly
         ```
-      </details>
+
+        </details>
 
     > :bulb:<br>
     > Toast notifications don't work in non-portable installations.<br>
     > See issue <https://github.com/wez/wezterm/issues/5166> for more details
-  
-    ---
+
+    ***
 
     **MacOS**
 
@@ -142,7 +144,8 @@
         sudo port selfupdate
         sudo port install wezterm
         ```
-      </details>
+
+        </details>
 
     - <details>
       <summary>Install Nighlty</summary>
@@ -158,9 +161,10 @@
         ```sh
         brew install --cask wezterm@nightly --no-quarantine --greedy-latest
         ```
-      </details>
 
-    ---
+        </details>
+
+    ***
 
     **Linux**
 
@@ -190,21 +194,23 @@
     >
     > - <https://www.nerdfonts.com/#home>
     > - <https://github.com/ryanoasis/nerd-fonts?#font-installation>
+
     </details/>
 
 &nbsp;
 
-- ##### Steps:
+- ##### Steps
 
-  1.  ```sh
-      # On Windows and Unix systems
-      git clone https://github.com/KevinSilvester/wezterm-config.git ~/.config/wezterm
-      ```
-  2.  And Done!!! 🎉🎉
+  1. ```sh
+     # On Windows and Unix systems
+     git clone https://github.com/KevinSilvester/wezterm-config.git ~/.config/wezterm
+     ```
+
+  2. And Done!!! 🎉🎉
 
 &nbsp;
 
-- ##### Things You Might Want to Change:
+- ##### Things You Might Want to Change
 
   - [./config/domains.lua](./config/domains.lua) for custom SSH/WSL domains
   - [./config/launch.lua](./config/launch.lua) for preferred shells and its paths
@@ -269,7 +275,7 @@ Most of the key bindings revolve around a <kbd>SUPER</kbd> and <kbd>SUPER_REV</k
 | Keys                              | Action                                |
 | --------------------------------- | ------------------------------------- |
 | <kbd>SUPER</kbd>+<kbd>t</kbd>     | `SpawnTab` <sub>(DefaultDomain)</sub> |
-| <kbd>SUPER_REV</kbd>+<kbd>f</kbd> | `SpawnTab` <sub>(WSL:Ubuntu)</sub>    |
+| <kbd>SUPER_REV</kbd>+<kbd>f</kbd> | `SpawnTab` <sub>(WSL:Arch)</sub>      |
 | <kbd>SUPER_REV</kbd>+<kbd>w</kbd> | `CloseCurrentTab`                     |
 
 ##### Tabs: Navigation
